@@ -1,0 +1,10 @@
+{
+  "name": "E3-CodeChallenge",
+  "version": "1.0.0",
+  "description": "E3 Coding Challenge",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-less": "^1.4.0",
+    "grunt-contrib-watch": "^1.0.0"
+  }
+}

@@ -1,0 +1,385 @@
+/*!
+ * Layout v0.1
+*/
+
+
+/* Table of Content
+==================================================
+	#Default Styles
+	#Font Styles
+	#Animation Effects
+	#Site Styles
+	#Page Styles
+	#Media Queries
+	#Font-Face */
+
+@import "default.less";
+@import "variables.less";
+@import "font-styles.less";
+
+/* #Site Styles
+================================================== */
+
+	body {
+	}
+
+	.btnwrap {
+		display: inline-block;
+	  -ms-transform: skewX(-5deg); /* IE 9 */
+	  -webkit-transform: skewX(-5deg); /* Safari */
+	  transform: skewX(-5deg);
+	}
+	.pink {
+		background: @pink;
+		&:hover {
+			background: @pinkhover !important;
+		}
+	}
+
+	button.btn-text {
+		color: #fff;
+		font-family: 'Roboto', sans-serif;
+		font-size: 1.2em;
+		font-weight: 900;
+	  -ms-transform: skewX(5deg); /* IE 9 */
+	  -webkit-transform: skewX(5deg); /* Safari */
+	  transform: skewX(5deg);
+		white-space:nowrap;
+		text-transform:uppercase;
+		padding: 18px 27px;
+		border: none;
+		background: none;
+	}
+
+	header {
+	}
+
+	#logo {
+		width: 117px;
+		height: 105px;
+		margin-top: 9px;
+		background: url(../images/header-logo.gif) top center no-repeat;
+	}
+
+	.topbar {
+		background: url(../images/header-topbar.gif) top right no-repeat;
+		// background-color: transparent;
+    // border-left: 50px solid transparent;
+    // border-top: 50px solid #15cadb;
+    // height: 50px;
+    // position: absolute;
+    // right: 0;
+    // top: 0;
+    // width: 75%;
+	}
+
+	ul#menu-primary-navigation {
+		padding-left: 361px;
+		margin: 0;
+	}
+
+	ul#menu-primary-navigation li {
+		display: inline-block;
+		font-size: 1.4em;
+		color: #363636;
+		text-transform: uppercase;
+		padding: 79px 15px 30px 15px;
+		margin: 0;
+	}
+
+	ul#menu-primary-navigation li a {
+		color: #363636;
+		font-weight: 700;
+	}
+
+/* Mobile Menu */
+.nav-mob {
+	display: none;
+}
+
+.mob-menu {
+	font-size: 30px;
+	background-color: transparent;
+	color: #fff;
+	border: none;
+	position: absolute;
+	top: 5px;
+	right: 10px;
+}
+
+/* The Overlay (background) */
+.overlay {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */
+    height: 100%;
+    width: 0;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    background-color: rgb(0,0,0); /* Black fallback color */
+    background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+    position: relative;
+    top: 25%; /* 25% from the top */
+    width: 100%; /* 100% width */
+    text-align: center; /* Centered text/links */
+    margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+/* The navigation links inside the overlay */
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block; /* Display block instead of inline */
+    transition: 0.3s; /* Transition effects on hover (color) */
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+/* End Mobile Menu */
+
+	.featured-area {
+		background-color: transparent;
+		padding-bottom: 41px;
+		padding-top: 232px;
+	}
+
+	h1.featuredheading {
+		// padding-top: 232px;
+		line-height: 57px;
+	}
+
+	span.subhead {
+		font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+		font-size: 2.15em;
+		line-height: 166%;
+	}
+
+	.featured-row {
+		margin-bottom: 120px;
+	}
+
+	.featured-img {
+		height: 500px;
+		background: url(../images/featured-img.png) top right no-repeat;
+		margin: 0 0 119px 0;
+	}
+
+	.events-sec {
+		padding-bottom: 137px;
+	}
+
+	.col-right {
+		padding: 20px 31px;
+	}
+
+	span.date {
+		font-family: 'Roboto', sans-serif;
+		font-size: 16px;
+		font-weight: 900;
+		color: #15cadb;
+		text-transform: uppercase;
+		line-height: 21px;
+	}
+
+	.events-headline-wrap {
+		display: inline-block;
+	  -ms-transform: skewY(1deg); /* IE 9 */
+	  -webkit-transform: skewY(1deg); /* Safari */
+	  transform: skewY(1deg);
+		background-color: @gray;
+		padding: 22px 27px;
+		margin-bottom: 58px;
+	}
+
+	.events-headline {
+		font-family: 'Roboto', sans-serif;
+		font-size: 2.35em;
+		font-weight: 400;
+		color: #fff;
+		-ms-transform: skewY(-1deg); /* IE 9 */
+	  -webkit-transform: skewY(-1deg); /* Safari */
+	  transform: skewY(-1deg);
+	}
+
+	.event-detail-img {
+		width: 386px;
+		height: 203px;
+		position: relative;
+	}
+
+	.event1 {
+		background: url(../images/event-detail-img1.jpg) top center no-repeat;
+	}
+	.event2 {
+		background: url(../images/event-detail-img2.jpg) top center no-repeat;
+	}
+	.event3 {
+		background: url(../images/event-detail-img3.jpg) top center no-repeat;
+	}
+	.event4 {
+		background: url(../images/event-detail-img4.jpg) top center no-repeat;
+	}
+	.event5 {
+		background: url(../images/event-detail-img5.jpg) top center no-repeat;
+	}
+	.event6 {
+		background: url(../images/event-detail-img6.jpg) top center no-repeat;
+	}
+
+	.event-detail-date-sec {
+		width: 120px;
+		height: 120px;
+		background: url(../images/event-detail-date-bg.png) top center no-repeat;
+		position: absolute;
+		top: 0;
+		right: 30px;
+		padding-top: 31px;
+		text-align: center;
+		line-height: 120%;
+	}
+
+	.event-detail-txt {
+		height: 183px;
+		padding: 10px 22px;
+		margin-bottom: 40px;
+	}
+
+	.event-detail-hr {
+		width: 98px;
+		color: #f41361;
+		border-top:1px solid #f41361;
+		border-bottom: 1px solid #f41361;
+		margin-top: 28px;
+		margin-bottom: 20px;
+	}
+
+	button.event-detail-learn {
+		color: @pink;
+		font-family: 'Roboto', sans-serif;
+		font-size: 1.125em;
+		font-weight: 900;
+		text-transform:uppercase;
+		border: none;
+		background: none;
+		padding-right: 23px;
+		background: url("../images/event-detail-learn-arrow.gif") right no-repeat;
+	}
+
+	footer {
+		text-align: center;
+	}
+
+@import "jquery.bxslider.less";
+@import "uniform.less";
+@import "magnific.less";
+
+/* #Media Queries
+================================================== */
+	@media only screen and (max-width: 1521px) {
+		.topbar {
+			background: url("../images/header-topbar.gif") no-repeat scroll 137% 0;
+		}
+	}
+
+	@media only screen and (max-width: 1351px) {
+		#logo {
+			margin-top: 60px !important;
+		}
+
+		.topbar {
+			background: url("../images/header-topbar.gif") no-repeat scroll 204% 0;
+		}
+	}
+
+	/* Smaller Than Large Screens */
+	@media only screen and (max-width: 1199px) {
+		.topbar {
+			background: url("../images/header-topbar.gif") top center no-repeat;
+		}
+		.nav-desk {
+			display: none !important;
+		}
+		.nav-mob {
+			display: block !important;
+		}
+
+		.featured-img {
+			margin-top: 15px;
+		}
+	}
+
+	/* standard 960 to Large Screen */
+	@media only screen and (min-width: 993px) and (max-width: 1199px) {
+	}
+
+	/* Tablet on Downwards */
+	@media only screen and (max-width:992px) {
+		.featured-area {
+			padding-top: 30px !important;
+		}
+
+		.featured-img {
+			width: 100% !important;
+			overflow: hidden !important;
+			margin-top: 15px;
+			background: url(../images/featuredimg.jpg) top center no-repeat !important;
+		}
+
+		.event-detail-block {
+			display: table;
+			margin: auto !important;
+			max-width: 386px !important;
+		}
+	}
+
+	/* Tablet Portrait size to standard 960 (devices and browsers) */
+	@media only screen and (min-width: 768px) and (max-width: 992px) {
+		.subhead {
+			color: #fff !important;
+		}
+	}
+
+	/* All Mobile Sizes (devices and browser) */
+	@media only screen and (max-width: 767px) {
+		.subhead {
+			color: #fff !important;
+		}
+	}
+
+	/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+	@media only screen and (min-width: 480px) and (max-width: 767px) {
+		.subhead {
+			color: #fff !important;
+		}
+
+		.overlay a {font-size: 20px}
+    .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+	}
+
+	/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+	@media only screen and (max-width: 479px) {
+	}
+
+@import "fonts.less";
